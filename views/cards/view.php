@@ -14,11 +14,48 @@
 							
 							<h5 class="card-title">Bingo card:</h5>					
 							<table class="table table-bordered">
+                                <?php if (isset($data['bingo_cards'])) { ?>    
+                            
+                                    <tbody>                                                                
+                                        <tr>      
+                                            <?php for ($i=0; $i<=4; $i++) { ?>
+                                                <td><?=$data['bingo_cards'][$i]?></td>    
+                                            <?php } ?>
+                                        </tr>                                         
+                                            
+                                        <tr>      
+                                            <?php for ($i=5; $i<=9; $i++) { ?>
+                                                <td><?=$data['bingo_cards'][$i]?></td>    
+                                            <?php } ?>         
+                                        </tr>      
+
+                                        <tr>      
+                                            <?php for ($i=10; $i<=14; $i++) { ?>
+                                                <td><?=$data['bingo_cards'][$i]?></td>    
+                                            <?php } ?>         
+                                        </tr>     
+
+                                        <tr>      
+                                            <?php for ($i=15; $i<=19; $i++) { ?>
+                                                <td><?=$data['bingo_cards'][$i]?></td>    
+                                            <?php } ?>         
+                                        </tr>      
+
+                                        <tr>      
+                                            <?php for ($i=20; $i<=24; $i++) { ?>
+                                                <td><?=$data['bingo_cards'][$i]?></td>    
+                                            <?php } ?>         
+                                        </tr>
+                                    </tbody>
+
+                                <?php } ?>
 							</table>                 
 															
 							<hr />
-							<button id="generate_bingo_cards" class="btn btn-primary">Generar Bingo Card</button>
-							<button id="delete_bingo_cards" class="btn btn-primary">Eliminar Bingo Card</button>
+							<form method="POST" action="<?=base_url?>cards/generate">
+								<input type="SUBMIT" class="btn btn-primary" name="action" value="Generar cards">
+								<input type="SUBMIT" class="btn btn-primary" name="action" value="Eliminar cards">
+							</form>
 						</div>
 						<div class="card-footer text-muted">
 							Generate Bingo Cards
