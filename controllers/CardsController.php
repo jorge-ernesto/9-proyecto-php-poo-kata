@@ -37,11 +37,8 @@ class CardsController{
 			unset($_SESSION['bingo_cards']);
 		}
 		
-		//DATA QUE PASAREMOS A LA VISTA
-		$bingo_cards = isset($_SESSION["bingo_cards"]) ? $_SESSION["bingo_cards"] : NULL;
-		$data['bingo_cards'] = $bingo_cards;
-		
-		require_once 'views/cards/view.php';
+		//REDIRECCIONAMOS A LA VISTA VIEW
+		header("Location:".base_url."cards/view");
 	}
 	
 }

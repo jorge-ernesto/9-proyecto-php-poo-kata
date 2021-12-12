@@ -49,13 +49,8 @@ class BingoController{
 			unset($_SESSION['numeros_aleatorio_actual']);			
 		}
 		
-		//DATA QUE PASAREMOS A LA VISTA
-		$numeros_aleatorios = isset($_SESSION["numeros_aleatorios"]) ? $_SESSION["numeros_aleatorios"] : NULL; 
-		$numero_aleatorio_actual = isset($_SESSION["numeros_aleatorio_actual"]) ? $_SESSION["numeros_aleatorio_actual"] : NULL; 	
-		$data['numeros_aleatorios'] = $numeros_aleatorios;
-		$data['numero_aleatorio_actual'] = $numero_aleatorio_actual;
-		
-		require_once 'views/bingo/view.php';
+		//REDIRECCIONAMOS A LA VISTA VIEW
+		header("Location:".base_url."bingo/view");
 	}
 	
 }
