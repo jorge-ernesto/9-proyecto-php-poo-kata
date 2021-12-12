@@ -17,5 +17,17 @@ class Utils{
 		
 		return $value;
 	}
+
+	public static function showStatusBingo($status){
+		$value = 'Pendiente';
+		
+		if($status == 'complete'){
+			$value = 'Ya llegaste al limite maximo, debes limpiar numeros para continuar';
+		}elseif($status == 'continue'){
+			$value = 'Aun falta para llegar a los 75 :)';
+		}
+		
+		return $value;
+	}
 	
 }
