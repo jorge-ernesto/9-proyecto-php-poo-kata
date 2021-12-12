@@ -33,7 +33,8 @@
 							<h1 style="font-size:200px;"><?=isset($data['numero_aleatorio_actual']) ? $data['numero_aleatorio_actual'] : 0;?></h1>
 						</div>
 						<div class="card-footer text-muted">
-							Aun falta para llegar a los 75 :) y nadie canto bingo
+							La cantidad de numeros actual es: <?=$data['cantidad_numeros']?><br />
+							<?=Utils::showStatusBingo($data['status'])?>
 						</div>
 					</div>                
 
