@@ -13,14 +13,24 @@
 						<div class="card-body">
 							
 							<h5 class="card-title">Los numeros que salieron son:</h5>
-							<p class="card-text"></p>                        
+							<?php
+								$numeros = "";
+								if (isset($data['numeros_aleatorios'])) {
+									foreach ($data['numeros_aleatorios'] as $key => $value) { 
+										$numeros .= $value . ", ";
+									}   
+								}                                                      
+							?>
+							<p class="card-text"><?=$numeros?></p>                        
 															
-							<hr />							
-							<input type="SUBMIT" class="btn btn-primary" name="action" value="Generar numero">
-							<input type="SUBMIT" class="btn btn-primary" name="action" value="Eliminar numero">							
+							<hr />
+							<form method="POST" action="<?=base_url?>bingo/generate">
+								<input type="SUBMIT" class="btn btn-primary" name="action" value="Generar numero">
+								<input type="SUBMIT" class="btn btn-primary" name="action" value="Eliminar numero">
+							</form>
 							
 							<br />
-							<h1 style="font-size:200px;">0</h1>
+							<h1 style="font-size:200px;"><?=isset($data['numero_aleatorio_actual']) ? $data['numero_aleatorio_actual'] : 0;?></h1>
 						</div>
 						<div class="card-footer text-muted">
 							Aun falta para llegar a los 75 :) y nadie canto bingo
