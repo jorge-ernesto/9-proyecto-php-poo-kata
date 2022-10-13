@@ -1,10 +1,14 @@
+<div class="container">
+	<footer>
+		<br />
+		<hr />
+		<img src="<?=base_url?>assets/img/php.png" width="200" alt="php">
+		
+		<p>
+			Powered by <a href="https://www.php.net/">PHP</a>
+		</p>
+		<p>
+			Este proyecto fue desarrollado en PHP, <a href="http://jorge-cywdt.herokuapp.com/">Jorge Ernesto</a>.<br>
+		</p>
+	</footer>		
 </div>
-</div>
-
-			<!-- PIE DE PÁGINA -->
-			<footer id="footer">
-				<p>Desarrollado por Víctor Robles WEB &copy; <?= date('Y') ?></p>
-			</footer>
-		</div>
-	</body>
-</html>

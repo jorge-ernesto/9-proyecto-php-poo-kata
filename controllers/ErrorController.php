@@ -2,8 +2,8 @@
 
 class errorController{
 	
-	public function index(){
-		echo "<h1>La página que buscas no existe</h1>";
+	public function index(){		
+		require_once 'views/errors/error_404.php';
 	}
 	
 }
