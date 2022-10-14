@@ -1,6 +1,6 @@
 <?php
 
-class CardsController{
+class cardsController{
 
 	public function index()
 	{

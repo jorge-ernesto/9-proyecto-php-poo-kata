@@ -1,6 +1,6 @@
 <?php
 
-class BingoController{
+class bingoController{
 	
 	public function index()
 	{
